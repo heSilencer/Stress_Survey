@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg"></div>
+    <div class="terms-box">
+        <div class="terms-text">
+            <h2>Terms And Conditions</h2>
+            <p>Last Edit:1/12/2022</p>
+            <p>Greetings User</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam illo totam facilis in! Laboriosam
+                a
+                debitis tempore enim voluptas assumenda unde sint dignissimos sit repudiandae temporibus minima illo
+                dolore
+                cupiditate pariatur nisi odio delectus minus, corrupti quas! Ipsam beatae totam minus culpa
+                exercitationem,
+                inventore optio quia distinctio eaque perferendis.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam illo totam facilis in! Laboriosam
+                a
+                debitis tempore enim voluptas assumenda unde sint dignissimos sit repudiandae temporibus minima illo
+                dolore
+                cupiditate pariatur nisi odio delectus minus, corrupti quas! Ipsam beatae totam minus culpa
+                exercitationem,
+                inventore optio quia distinctio eaque perferendis.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam illo totam facilis in! Laboriosam
+                a
+                debitis tempore enim voluptas assumenda unde sint dignissimos sit repudiandae temporibus minima illo
+                dolore
+                cupiditate pariatur nisi odio delectus minus, corrupti quas! Ipsam beatae totam minus culpa
+                exercitationem,
+                inventore optio quia distinctio eaque perferendis.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam illo totam facilis in! Laboriosam
+                a
+                debitis tempore enim voluptas assumenda unde sint dignissimos sit repudiandae temporibus minima illo
+                dolore
+                cupiditate pariatur nisi odio delectus minus, corrupti quas! Ipsam beatae totam minus culpa
+                exercitationem,
+                inventore optio quia distinctio eaque perferendis.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione magnam illo totam facilis in! Laboriosam
+                a
+                debitis tempore enim voluptas assumenda unde sint dignissimos sit repudiandae temporibus minima illo
+                dolore
+                cupiditate pariatur nisi odio delectus minus, corrupti quas! Ipsam beatae totam minus culpa
+                exercitationem,
+                inventore optio quia distinctio eaque perferendis.</p>
+                <label for="agree-checkbox">
+                    <input type="checkbox" id="agree-checkbox"> I Agree To The <span> Terms And Conditions</span> And I Read The Privacy Notice</h4>
+                </label>
+       
+       <div class="buttons">
+           <button class="btn red-btn">Accept</button>
+           <button class="btn gray-btn">Decline</button>
+       </div>
+       
+
+            </div>
+    </div>
+    <script>
+        // Adding event listeners to buttons by their class names
+        document.querySelector('.red-btn').addEventListener('click', function() {
+            if (!document.getElementById('agree-checkbox').checked) {
+                alert("Please agree to the Terms and Conditions before proceeding.");
+                return false; // Prevent form submission
+            }
+            window.location.href = 'index2.html'; // Redirect to index2.html if terms are accepted
+        });
+    
+        document.querySelector('.gray-btn').addEventListener('click', function() {
+            window.location.href = 'thankyou.php'; // Redirect to thankyou.php if terms are declined
+        });
+    </script>
+    
+</body>
+
+</html>
