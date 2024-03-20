@@ -106,7 +106,7 @@
             if (xhr.readyState === 4 && xhr.status === 200) {
                 // If the choice is successfully saved, navigate to index2.html
                 if (choice === 'agree') {
-                    window.location.href = 'index3.html';
+                    window.location.href = 'index3.php';
                 } else {
                     // For disagreement, simply close the window
                     window.location.href = "thankyou.php";
