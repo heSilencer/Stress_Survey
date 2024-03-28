@@ -64,7 +64,7 @@
                 <p id="quest">Which option best describe your current role</p>
                 <select name="year_level" required id="dropdown" class="formControl" required>
                     <option value disabled selected >Select Current Year Level</option>
-                    <option value="ST YEAR">1ST YEAR</option>
+                    <option value="1ST YEAR">1ST YEAR</option>
                     <option value="2ND YEAR">2ND YEAR</option>
                     <option value="3RD YEAR">3RD YEAR</option>
                     <option value="4TH YEAR">4TH YEAR</option>
@@ -233,7 +233,7 @@
                 <label for="">
                     <input type="radio" name="effective" value="Not Effective"
                     class="inputRadio"
-                    > Not Effective
+                    required> Not Effective
                 </label>
                 <label for="">
                     <input type="radio" name="effective" value="Somewhat Effective "
@@ -252,7 +252,7 @@
                 <label for="">
                     <input type="radio" name="important" value="Not Importan at all "
                     class="inputRadio"
-                    > Not Importan at all
+                    required > Not Importan at all
                 </label>
                 <label for="">
                     <input type="radio" name="important" value="Somewhat Important"
@@ -275,7 +275,7 @@
                 <label for="">
                     <input type="radio" name="seek" value="Rarely"
                     class="inputRadio"
-                    > Rarely
+                    required > Rarely
                 </label>
                 <label for="">
                     <input type="radio" name="seek" value="Sometimes"
@@ -300,7 +300,7 @@
                 <label for="">
                     <input type="radio" name="attended" value="Yes"
                     class="inputRadio"
-                    > Yes
+                    required > Yes
                 </label>
                 <label for="">
                     <input type="radio" name="attended" value="No"
