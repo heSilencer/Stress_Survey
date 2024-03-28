@@ -108,32 +108,18 @@
             
             </div>
             <div class="form-group">
-                <p id="quest">2. What was your last semester GWA?</p>
+                <p id="quest">2. Are you stress right now ?</p>
                 <label for="">
-                    <input type="radio" name="gwa" value="Greater than 2.0 "
+                    <input type="radio" name="stress" value="Yes "
                     class="inputRadio"
-                    required> Greater than 2.0 
+                    required> Yes
                 </label>
                 <label for="">
-                    <input type="radio" name="gwa" value="2.0 – 2.5"
+                    <input type="radio" name="stress" value="No"
                     class="inputRadio"
-                    required>2.0 – 2.5
+                    required>No
                 </label>
-                <label for="">
-                    <input type="radio" name="gwa" value="2.6 - 3.0 "
-                    class="inputRadio"
-                    required > 2.6 - 3.0
-                </label>
-                <label for="">
-                    <input type="radio" name="gwa" value="3.1 - 4.0 "
-                    class="inputRadio"
-                    required >3.1 - 4.0
-                </label>
-                <label for="">
-                    <input type="radio" name="gwa" value="4.1 - 5.0 "
-                    class="inputRadio"
-                    required>4.1 - 5.0
-                </label>
+               
                 
                 
             </div>
@@ -182,71 +168,64 @@
                           
             </div>
             <div class="form-group">
-                <p id="quest">5. What are the main sources of stress in your life? (Select all that apply)</p>
-                <label>
-                    <input type="checkbox" name="sources[]" value="Work" class="inputCheckbox" required> Work
+                <p id="quest">5. What are the main source of stress in your life?</p>
+                <label for="">
+                    <input type="radio" name="sources" value="Work" class="inputRadio" required> Work
                 </label>
-                <label>
-                    <input type="checkbox" name="sources[]" value="School" class="inputCheckbox"> School
+                <label for="">
+                    <input type="radio" name="sources" value="School" class="inputRadio"> School
                 </label>
-                <label>
-                    <input type="checkbox" name="sources[]" value="Relationships" class="inputCheckbox"> Relationships
+                <label for="">
+                    <input type="radio" name="sources" value="Relationships" class="inputRadio"> Relationships
                 </label>
-                <label>
-                    <input type="checkbox" name="sources[]" value="Finances" class="inputCheckbox"> Finances
+                <label for="">
+                    <input type="radio" name="sources" value="Finances" class="inputRadio"> Finances
                 </label>
-                <label>
-                    <input type="checkbox" name="sources[]" value="Health" class="inputCheckbox"> Health
+                <label for="">
+                    <input type="radio" name="sources" value="Health" class="inputRadio"> Health
                 </label>
-                <label>
-                    <input type="checkbox" name="sources[]" value="Daily hassles" class="inputCheckbox"> Daily hassles (traffic, errands, etc.)
+                <label for="">
+                    <input type="radio" name="sources" value="Daily hassles" class="inputRadio"> Daily hassles (traffic, errands, etc.)
                 </label>
-                <label>
-                    <input type="checkbox" name="sources[]" value="other" class="inputCheckbox" id="otherDeviceCheckbox"> Other
-                </label>
-                <label id="otherDeviceLabel" style="display: none;">
-                    Specify:
-                    <input type="text" name="other_sources" id="otherDeviceSpecify" placeholder="Please Specify">
-                </label>
-                <!-- Hidden input field to enforce 'required' validation -->
-                <input type="hidden" name="sources_validator" required>
+                <label for="">
+                    <input type="radio" name="sources" value="Family" class="inputRadio"> Family
+            
+            
             </div>
 
             <div class="form-group">
-            <p id="quest">6. When feeling stressed, what coping mechanisms do you typically use? (Select all that apply)</p>
+            <p id="quest">6. When feeling stressed, what is the best coping mechanisms do you typically use?</p>
             <label>
-            <input type="checkbox" name="coping[]" value="Physical activity" class="inputCheckbox" required> Physical activity (exercise, yoga)
-            </label>
-            <label>
-            <input type="checkbox" name="coping[]" value="Relaxation techniques" class="inputCheckbox"> Relaxation techniques (deep breathing, meditation)
+            <input type="radio" name="coping" value="Physical activity" class="inputRadio" required> Physical activity (exercise, yoga)
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="Spending time in nature" class="inputCheckbox"> Spending time in nature
+            <input type="radio" name="coping" value="Relaxation techniques" class="inputRadio"> Relaxation techniques (deep breathing, meditation)
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="Talking to a friend or family member" class="inputCheckbox"> Talking to a friend or family member
+            <input type="radio" name="coping" value="Spending time in nature" class="inputRadio"> Spending time in nature
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="Listening to music" class="inputCheckbox"> Listening to music
+            <input type="radio" name="coping" value="Talking to a friend or family member" class="inputRadio"> Talking to a friend or family member
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="Engaging in hobbies" class="inputCheckbox"> Engaging in hobbies
+            <input type="radio" name="coping" value="Listening to music" class="inputRadio"> Listening to music
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="Watching TV/movies" class="inputCheckbox"> Watching TV/movies
+            <input type="radio" name="coping" value="Engaging in hobbies" class="inputRadio"> Engaging in hobbies
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="Using social media" class="inputCheckbox"> Using social media
+            <input type="radio" name="coping" value="Watching TV/movies" class="inputRadio"> Watching TV/movies
             </label>
             <label>
-            <input type="checkbox" name="coping[]" value="other" class="inputCheckbox" id="otherAvoidCheckbox"> Other
+            <input type="radio" name="coping" value="Using social media" class="inputRadio"> Using social media
             </label>
-            <label id="otherAvoidLabel" style="display: none;">
-            Specify:
-            <input type="text" name="other_coping" id="otherAvoidSpecify" placeholder="Please Specify">
+            <label>
+            <input type="radio" name="coping" value=" Eating " class="inputRadio"> Eating
             </label>
-            <!-- Hidden input field to enforce 'required' validation -->
-            <input type="hidden" name="coping_validator" required>
+            <label>
+            <input type="radio" name="coping" value=" Shopping " class="inputRadio"> Shopping
+            </label>
+           
             </div>  
 
             <div class="form-group">
@@ -335,10 +314,10 @@
            
 
             <!-- Textarea section -->
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <p id="quest">Give us your feedback</p>
                 <textarea name="feedback"  cols="30" rows="5"  id="feedback" class="textarea" placeholder="Enter your feedback About The questionaire here ..."></textarea>
-            </div>
+            </div> -->
             <div class="form-group">
                 <button type="submit" id="submit" class="btn">Submit</button>
             </div>

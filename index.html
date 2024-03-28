@@ -60,26 +60,29 @@
                 </label>
        
        <div class="buttons">
-           <button class="btn red-btn">Accept</button>
-           <button class="btn gray-btn">Decline</button>
+           <button id = "agree" class="btn red-btn">Accept</button>
+           <button id = "gray-btn" class="btn gray-btn">Decline</button>
        </div>
        
 
             </div>
     </div>
     <script>
-        // Adding event listeners to buttons by their class names
-        document.querySelector('.red-btn').addEventListener('click', function() {
+        document.getElementById('agree').addEventListener('click', function() {
             if (!document.getElementById('agree-checkbox').checked) {
                 alert("Please agree to the Terms and Conditions before proceeding.");
-                return false; // Prevent form submission
+                event.preventDefault(); // Prevent form submission if checkbox is not checked
+            } else {
+                recordStatus('Agreed'); // Record agreement status
             }
-            window.location.href = 'question1.php'; // Redirect to index2.html if terms are accepted
         });
-    
-        document.querySelector('.gray-btn').addEventListener('click', function() {
-            window.location.href = 'thankyou.php'; // Redirect to thankyou.php if terms are declined
+        document.getElementById('gray-btn').addEventListener('click', function() {
+            recordStatus('Declined'); // Record decline status
         });
+
+        function recordStatus(status) {
+            window.location.href = 'submit2.php?status=' + status; // Redirect to submit2.php with status
+        }
     </script>
     
 </body>

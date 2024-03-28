@@ -35,8 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
     // Prepare and bind the SQL statement
-    $stmt = $conn->prepare("INSERT INTO survey_responses (name, email, age, role, year_level, gender, status, gwa, experience, affect, sources, coping, effective, important, seek, attended, feedback) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssssssssssssss", $name, $email, $age, $role, $year_level, $gender, $status, $gwa, $experience, $affect, $sources, $coping, $effective, $important, $seek, $attended, $feedback);
+    $stmt = $conn->prepare("INSERT INTO survey_responses (name, email, age, role, year_level, gender, status, stress, experience, affect, sources, coping, effective, important, seek, attended) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssssssssssss", $name, $email, $age, $role, $year_level, $gender, $status, $stress, $experience, $affect, $sources, $coping, $effective, $important, $seek, $attended);
 
     // Set parameters and execute
     $name = $_POST['name'];
@@ -46,40 +46,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $year_level = $_POST['year_level']; // Note: make sure to add the 'year_level' field in your HTML form
     $gender = $_POST['gender'];
     $status = $_POST['status'];
-    $gwa = $_POST['gwa'];
+    $stress = $_POST['stress'];
     $experience = $_POST['experience'];
     $affect = $_POST['affect'];
-   // Convert array to comma-separated string
-if (is_array($_POST['sources'])) {
-    $sources = implode(', ', $_POST['sources']);
-} else {
     $sources = $_POST['sources'];
-}
-
-
-    if ($sources === "other") {
-        // User selected "Other," use the custom genre value
-        $customSources = isset($_POST["other_sources"]) ? $_POST["other_sources"] : "";
-        $sources = !empty($customSources) ? $customSources : "Other"; // Use "Other" if custom genre is empty
-    }
-    // Convert array to comma-separated string
- // Convert array to comma-separated string
-if (is_array($_POST['coping'])) {
-    $coping = implode(', ', $_POST['coping']);
-} else {
-    $coping = $_POST['coping'];
-}
-
-    if ($coping === "other") {
-        // User selected "Other," use the custom genre value
-        $customCoping = isset($_POST["other_coping"]) ? $_POST["other_coping"] : "";
-        $coping = !empty($customCoping) ? $customCoping : "Other"; // Use "Other" if custom genre is empty
-    }
+    $coping = $_POST['coping'];  
     $effective = $_POST['effective'];
     $important = $_POST['important'];
     $seek = $_POST['seek'];
     $attended = $_POST['attended'];
-    $feedback = $_POST['feedback'];
 
 
     // Execute the SQL statement
